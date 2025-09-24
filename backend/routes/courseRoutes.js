@@ -46,3 +46,4 @@ router.post("/:id/enroll", protect, async (req, res) => {
 });
 
 export default router;
+console.log("fsfa");
