@@ -5,6 +5,8 @@ import cors from "cors";
 import authRoutes from "./routes/authRoutes.js"
 import userRoutes from "./routes/userRoutes.js";
 import courseRoutes from "./routes/courseRoutes.js"
+import lessonModuleRoutes from "./routes/lessonModuleRoutes.js";
+
 
 dotenv.config();  // load .env variables
 connectDB();      // connect to MongoDB
@@ -16,6 +18,8 @@ app.use(express.json()); // parse JSON request bodies
 app.use("/api/auth", authRoutes)
 app.use("/api/courses", courseRoutes)
 app.use("/api/user", userRoutes);
+app.use("/api/lesson-modules", lessonModuleRoutes);
+
 
 
 app.get("/", (req, res) => {
